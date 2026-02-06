@@ -1,5 +1,5 @@
 // Número do WhatsApp para pedidos
-const WHATSAPP_NUMBER = '5531993963699';
+const WHATSAPP_NUMBER = '5531973281585';
 
 // Carrinho de compras
 let cart = [];
