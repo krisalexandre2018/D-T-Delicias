@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D&T Delícias - Cardápio Online</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="nav-brand">D&T Delícias</a>
+            <ul class="nav-links">
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#cardapio">Cardápio</a></li>
+                <li><a href="#pix">PIX</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="header">
+        <div class="container">
+            <img src="IMG_5177.png" alt="D&T Delícias Logo" class="logo">
+            <h1>D&T Delícias</h1>
+            <p class="tagline">Sabores que encantam!</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="welcome-section" id="sobre">
+            <h2>Chegou D&T Delícias!!</h2>
+            <p class="welcome-intro">É com muito carinho e sabor que apresentamos a nossa loja:</p>
+            <p class="welcome-brand">D&T Delícias</p>
+            <p class="welcome-text">
+                Aqui, cada empada e docinho é feito com amor, pensando em trazer o gostinho de casa para o seu dia.
+                Seja para um lanche, uma comemoração ou aquele momento especial, temos as delícias perfeitas para você!
+            </p>
+            <p class="welcome-cta">Siga a gente, compartilhe e acompanhe todas as novidades!</p>
+            <a href="https://instagram.com/dt_deliciass" target="_blank" class="instagram-link">
+                <span class="instagram-icon">📸</span> @dt_deliciass
+            </a>
+        </section>
+
+        <section class="menu-section" id="cardapio">
+            <h2>Nosso Cardápio</h2>
+
+            <div class="category">
+                <h3>Empadas</h3>
+                <div class="menu-grid">
+                    <div class="menu-item" data-name="Empada de Frango com Catupiry" data-price="5.00">
+                        <div class="item-info">
+                            <h4>Empada de Frango com Catupiry</h4>
+                            <p class="price">R$ 5,00</p>
+                        </div>
+                        <div class="quantity-controls">
+                            <button class="btn-qty btn-minus" onclick="updateQuantity(this, -1)">-</button>
+                            <span class="quantity">0</span>
+                            <button class="btn-qty btn-plus" onclick="updateQuantity(this, 1)">+</button>
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-name="Empada de Frango com Bacon" data-price="5.00">
+                        <div class="item-info">
+                            <h4>Empada de Frango com Bacon</h4>
+                            <p class="price">R$ 5,00</p>
+                        </div>
+                        <div class="quantity-controls">
+                            <button class="btn-qty btn-minus" onclick="updateQuantity(this, -1)">-</button>
+                            <span class="quantity">0</span>
+                            <button class="btn-qty btn-plus" onclick="updateQuantity(this, 1)">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category">
+                <h3>Bebidas</h3>
+                <div class="menu-grid">
+                    <div class="menu-item" data-name="Coca-cola 200ml" data-price="3.50">
+                        <div class="item-info">
+                            <h4>Coca-cola 200ml</h4>
+                            <p class="price">R$ 3,50</p>
+                        </div>
+                        <div class="quantity-controls">
+                            <button class="btn-qty btn-minus" onclick="updateQuantity(this, -1)">-</button>
+                            <span class="quantity">0</span>
+                            <button class="btn-qty btn-plus" onclick="updateQuantity(this, 1)">+</button>
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-name="Refrigerante lata 269ml" data-price="5.00">
+                        <div class="item-info">
+                            <h4>Refrigerante lata 269ml</h4>
+                            <p class="price">R$ 5,00</p>
+                        </div>
+                        <div class="quantity-controls">
+                            <button class="btn-qty btn-minus" onclick="updateQuantity(this, -1)">-</button>
+                            <span class="quantity">0</span>
+                            <button class="btn-qty btn-plus" onclick="updateQuantity(this, 1)">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category">
+                <h3>Doces</h3>
+                <div class="menu-grid">
+                    <div class="menu-item" data-name="Tortinha de Limão" data-price="8.00">
+                        <div class="item-info">
+                            <h4>Tortinha de Limão</h4>
+                            <p class="price">R$ 8,00</p>
+                        </div>
+                        <div class="quantity-controls">
+                            <button class="btn-qty btn-minus" onclick="updateQuantity(this, -1)">-</button>
+                            <span class="quantity">0</span>
+                            <button class="btn-qty btn-plus" onclick="updateQuantity(this, 1)">+</button>
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-name="Tortinha de Chocolate" data-price="8.00">
+                        <div class="item-info">
+                            <h4>Tortinha de Chocolate</h4>
+                            <p class="price">R$ 8,00</p>
+                        </div>
+                        <div class="quantity-controls">
+                            <button class="btn-qty btn-minus" onclick="updateQuantity(this, -1)">-</button>
+                            <span class="quantity">0</span>
+                            <button class="btn-qty btn-plus" onclick="updateQuantity(this, 1)">+</button>
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-name="Bolo Gelado" data-price="6.00">
+                        <div class="item-info">
+                            <h4>Bolo Gelado</h4>
+                            <p class="price">R$ 6,00</p>
+                        </div>
+                        <div class="quantity-controls">
+                            <button class="btn-qty btn-minus" onclick="updateQuantity(this, -1)">-</button>
+                            <span class="quantity">0</span>
+                            <button class="btn-qty btn-plus" onclick="updateQuantity(this, 1)">+</button>
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-name="Pavê de Bis" data-price="10.00">
+                        <div class="item-info">
+                            <h4>Pavê de Bis</h4>
+                            <p class="price">R$ 10,00</p>
+                        </div>
+                        <div class="quantity-controls">
+                            <button class="btn-qty btn-minus" onclick="updateQuantity(this, -1)">-</button>
+                            <span class="quantity">0</span>
+                            <button class="btn-qty btn-plus" onclick="updateQuantity(this, 1)">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="delivery-section">
+            <div class="delivery-info">
+                <span class="delivery-icon">🛵</span>
+                <div class="delivery-text">
+                    <strong>Taxa de entrega</strong>
+                    <p>Consulte via WhatsApp</p>
+                </div>
+                <a href="https://wa.me/5531993963699?text=Ol%C3%A1!%20Gostaria%20de%20saber%20a%20taxa%20de%20entrega%20para%20minha%20regi%C3%A3o." target="_blank" class="btn-delivery">Consultar</a>
+            </div>
+        </section>
+
+        <section class="pix-section" id="pix">
+            <h2>Pague com PIX</h2>
+            <div class="pix-info">
+                <p><strong>Nome:</strong> Taylon Gustavo De Alcântara Modesto</p>
+                <p><strong>Chave:</strong> dtdeliciass@gmail.com</p>
+            </div>
+        </section>
+    </main>
+
+    <div class="float-buttons">
+        <a href="https://wa.me/5531993963699?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida." target="_blank" class="whatsapp-float">
+            <span class="whatsapp-icon">💬</span>
+        </a>
+        <div class="cart-float" id="cartFloat" onclick="toggleCart()">
+            <span class="cart-icon">🛒</span>
+            <span class="cart-count" id="cartCount">0</span>
+        </div>
+    </div>
+
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h3>Seu Pedido</h3>
+                <button class="close-cart" onclick="toggleCart()">&times;</button>
+            </div>
+            <div class="cart-items" id="cartItems">
+                <p class="empty-cart">Seu carrinho está vazio</p>
+            </div>
+            <div class="cart-form">
+                <div class="form-group">
+                    <label for="customerName">Seu nome *</label>
+                    <input type="text" id="customerName" placeholder="Digite seu nome">
+                </div>
+                <div class="form-group">
+                    <label for="customerAddress">Endereço de entrega *</label>
+                    <input type="text" id="customerAddress" placeholder="Rua, número, bairro">
+                </div>
+                <div class="form-group">
+                    <label for="customerComplement">Complemento</label>
+                    <input type="text" id="customerComplement" placeholder="Apto, bloco, referência (opcional)">
+                </div>
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span id="cartTotal">R$ 0,00</span>
+                </div>
+                <button class="btn-whatsapp" onclick="sendToWhatsApp()">
+                    <span>📱</span> Enviar Pedido via WhatsApp
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <img src="IMG_5177.png" alt="D&T Delícias" class="footer-logo">
+            <p>D&T Delícias - Feito com amor!</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
